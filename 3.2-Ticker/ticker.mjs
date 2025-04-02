@@ -23,7 +23,7 @@ function tick(timer, emitter, tickCount, callback) {
         }
 
         setTimeout(() => {
-                emitter.emit('tick', tickCount)
+                emitter.emit('tick')
                 tickCount++
                 return tick(timer - INTERVAL, emitter, tickCount, callback)
         }, INTERVAL)
