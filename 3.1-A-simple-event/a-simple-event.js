@@ -11,10 +11,12 @@ class FindRegex extends EventEmitter {
     this.regex = regex
     this.files = []
   }
+
   addFile (file) {
     this.files.push(file)
     return this
   }
+
   find () {
     // +++ 3.1 added line
     // Need to use process.nextTick() to emit 'started' event asynchronously.
